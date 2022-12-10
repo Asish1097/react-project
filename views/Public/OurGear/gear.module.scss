@@ -1,0 +1,163 @@
+@import "../../common.scss";
+
+.banner_sec {
+  padding: 160px 0 120px;
+  min-height: 280px;
+  overflow: hidden;
+  @media (max-width: 991px) {
+    padding-top: 100px;
+  }
+  @media (max-width: 575px) {
+    padding-top: 70px;
+  }
+  
+}
+
+.contact_heading {
+  font-size: 23px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.gear_div {
+  background-repeat: no-repeat;
+  border: 1px solid #000000;
+  width: 100%;
+  background-position: center;
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  border-radius: 30px;
+  img {
+    height: 100%;
+    width: 100%;
+    opacity: 30%;
+  }
+  img:hover {
+    opacity: 100%;
+    
+  }
+  
+}
+
+.img_content {
+  position: absolute;
+  bottom: 0;
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+      margin-left: 18px;
+      color: #000000;
+      font-size: 18px;
+    }
+  
+    
+    ul li {
+      font-family: 'Montserrat', sans-serif;
+      margin-left: 18px;
+      color: #000000;
+      font-size: 12px;
+    }
+}
+
+.hoodies {
+  li {
+    font-weight: 100;
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.gear_div:hover {  
+  h3 {
+    margin-left: 18px;
+    color: #ffffff;
+    filter: drop-shadow(0px 0px 5px #000000);
+  }
+  ul li {
+    margin-left: 18px;
+    color: #ffffff;
+    filter: drop-shadow(0px 0px 5px #000000);
+  }
+}
+
+.main_grid {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "gear_short_shirt gear_long_shirt gear_hoddies"
+    "gear_sweaters gear_sweaters gear_hoddies";
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "gear_short_shirt gear_long_shirt"
+    "gear_sweaters gear_hoddies";
+  }
+  @media (max-width: 798px) {
+    grid-gap: 0px;
+    grid-row-gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "gear_short_shirt"
+    "gear_long_shirt"
+    "gear_sweaters"
+    "gear_hoddies";
+  }
+}
+
+.gear_short_shirt {
+  grid-row: 1/2;
+  @media (max-width: 798px) {
+    grid-row: 1/2;
+  }
+}
+
+.gear_long_shirt {
+  grid-row: 1/2;
+  @media (max-width: 798px) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+
+.gear_sweaters {
+  grid-column: 1/span 2;
+  grid-row: 2/span 2;
+  @media (max-width: 991px) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    
+  }
+  @media (max-width: 798px) {
+    grid-column: 1/span 2;
+    grid-row: auto;
+  }
+}
+
+.gear_hoddies {
+  grid-row:  1/span 3;
+  display: flex;
+  @media (max-width: 991px) {
+    height: auto;
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  @media (max-width: 798px) {
+    grid-column: 1/2;
+    height: 300px;
+    grid-row: auto;
+    
+  }
+  height: 612px;
+  @media (max-width: 769px) {
+    height: 300px;
+  }
+  ul {
+    display: flex;
+    li {
+      list-style-type: none;
+    }
+  }
+}
